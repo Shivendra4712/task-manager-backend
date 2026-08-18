@@ -1,6 +1,6 @@
 datasource db {
-  provider = "postgresql"
-  url      = "postgresql://postgres.ansygrxnzpprkvsudibd:Shivendra%401155@://supabase.com"
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 generator client {
@@ -25,6 +25,7 @@ model Task {
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
 
 
 
